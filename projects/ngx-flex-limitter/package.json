@@ -1,7 +1,13 @@
 {
   "name": "@lesfabricants/ngx-flex-limitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for limiting the number of lines in a flex container.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Passiverecords/libraries.git",
+    "directory": "projects/ngx-flex-limitter"
+  },
+  "readme": "https://github.com/Passiverecords/libraries/tree/develop/projects/ngx-flex-limitter/README.md",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
