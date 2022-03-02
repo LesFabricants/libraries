@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-flex-limitter": {
+      "projectType": "library",
+      "root": "projects/ngx-flex-limitter",
+      "sourceRoot": "projects/ngx-flex-limitter/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-flex-limitter/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-flex-limitter/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-flex-limitter/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-flex-limitter/src/test.ts",
+            "tsConfig": "projects/ngx-flex-limitter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-flex-limitter/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-flex-limitter"
 }

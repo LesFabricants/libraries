@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-flex-limitter": [
+        "dist/ngx-flex-limitter/ngx-flex-limitter",
+        "dist/ngx-flex-limitter"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
