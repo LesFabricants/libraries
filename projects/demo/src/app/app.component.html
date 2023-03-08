@@ -1,0 +1,18 @@
+<div
+  class="progress-bar"
+  *ngxProgress="
+    let percentages of ['reviewed', 'pending'];
+    in: answers;
+    key: 'status'
+  "
+>
+  <div class="progress-item green" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item blue" [style.width.%]="percentages[1]"></div>
+</div>
+<div
+  class="progress-bar"
+  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
+>
+  <div class="progress-item green" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item blue" [style.width.%]="percentages[1]"></div>
+</div>
