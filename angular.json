@@ -33,6 +33,37 @@
           }
         }
       }
+    },
+    "ngx-progress": {
+      "projectType": "library",
+      "root": "projects/ngx-progress",
+      "sourceRoot": "projects/ngx-progress/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-progress/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-progress/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-progress/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-progress/src/test.ts",
+            "tsConfig": "projects/ngx-progress/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-progress/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }

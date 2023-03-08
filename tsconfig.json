@@ -15,6 +15,10 @@
       "ngx-flex-limitter": [
         "dist/ngx-flex-limitter/ngx-flex-limitter",
         "dist/ngx-flex-limitter"
+      ],
+      "ngx-progress": [
+        "dist/ngx-progress/ngx-progress",
+        "dist/ngx-progress"
       ]
     },
     "declaration": false,
