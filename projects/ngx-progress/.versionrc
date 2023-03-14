@@ -1,0 +1,7 @@
+{
+  "tagPrefix": "ngx-progress/",
+  "releaseCommitMessageFormat": "release: {{currentTag}}",
+  "skip": {
+    "tag": true
+  }
+}

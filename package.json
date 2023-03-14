@@ -6,9 +6,11 @@
     "build:ngx-flex-limitter": "ng build ngx-flex-limitter --configuration development",
     "build:ngx-flex-limitter:prod": "ng build ngx-flex-limitter --configuration production",
     "pack:ngx-flex-limitter": "npm pack ./dist/ngx-flex-limitter",
+    "release:ngx-flex-limitter": "cd ./projects/ngx-flex-limitter && standard-version --path ./projects/ngx-flex-limitter",
     "build:ngx-progress": "ng build ngx-progress --configuration development",
     "build:ngx-progress:prod": "ng build ngx-progress --configuration production",
-    "pack:ngx-progress": "npm pack ./dist/ngx-progress"
+    "pack:ngx-progress": "npm pack ./dist/ngx-progress",
+    "release:ngx-progress": "cd ./projects/ngx-progress && standard-version --path ./projects/ngx-progress"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +30,8 @@
     "@angular-devkit/build-angular": "^15.2.2",
     "@angular/cli": "^15.2.2",
     "@angular/compiler-cli": "^15.2.2",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^16.11.65",
     "jasmine-core": "~4.0.0",
@@ -37,6 +41,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^15.2.2",
+    "standard-version": "^9.5.0",
     "typescript": "~4.8.4"
   }
 }

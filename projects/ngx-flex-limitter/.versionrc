@@ -1,0 +1,7 @@
+{
+  "tagPrefix": "ngx-flex-limitter/",
+  "releaseCommitMessageFormat": "release: {{currentTag}}",
+  "skip": {
+    "tag": true
+  }
+}
