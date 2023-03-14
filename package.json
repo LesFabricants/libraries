@@ -2,33 +2,32 @@
   "name": "libraries",
   "version": "2.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start:demo": "ng serve demo --ssl",
     "build:ngx-flex-limitter": "ng build ngx-flex-limitter --configuration development",
     "build:ngx-flex-limitter:prod": "ng build ngx-flex-limitter --configuration production",
     "pack:ngx-flex-limitter": "npm pack ./dist/ngx-flex-limitter",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build:ngx-progress": "ng build ngx-progress --configuration development",
+    "build:ngx-progress:prod": "ng build ngx-progress --configuration production",
+    "pack:ngx-progress": "npm pack ./dist/ngx-progress"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.2.5",
-    "@angular/common": "^14.2.5",
-    "@angular/compiler": "^14.2.5",
-    "@angular/core": "^14.2.5",
-    "@angular/forms": "^14.2.5",
-    "@angular/platform-browser": "^14.2.5",
-    "@angular/platform-browser-dynamic": "^14.2.5",
-    "@angular/router": "^14.2.5",
+    "@angular/animations": "^15.2.2",
+    "@angular/common": "^15.2.2",
+    "@angular/compiler": "^15.2.2",
+    "@angular/core": "^15.2.2",
+    "@angular/forms": "^15.2.2",
+    "@angular/platform-browser": "^15.2.2",
+    "@angular/platform-browser-dynamic": "^15.2.2",
+    "@angular/router": "^15.2.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.5",
-    "@angular/cli": "^14.2.5",
-    "@angular/compiler-cli": "^14.2.5",
+    "@angular-devkit/build-angular": "^15.2.2",
+    "@angular/cli": "^15.2.2",
+    "@angular/compiler-cli": "^15.2.2",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^16.11.65",
     "jasmine-core": "~4.0.0",
@@ -37,7 +36,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "ng-packagr": "^14.2.1",
+    "ng-packagr": "^15.2.2",
     "typescript": "~4.8.4"
   }
 }
