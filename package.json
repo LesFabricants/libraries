@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "start:demo": "ng serve demo --ssl",
+    "build:demo": "ng build demo --configuration production --base-href https://rodrigokamada.github.io/angular-github-actions/",
     "build:ngx-flex-limitter": "ng build ngx-flex-limitter --configuration development",
     "build:ngx-flex-limitter:prod": "ng build ngx-flex-limitter --configuration production",
     "pack:ngx-flex-limitter": "npm pack ./dist/ngx-flex-limitter",
