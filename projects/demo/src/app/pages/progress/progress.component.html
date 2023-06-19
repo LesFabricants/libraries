@@ -1,0 +1,85 @@
+<h1>Progress</h1>
+
+<p>
+  A small utility directive to create progress bars without having to hack css
+  to make a component fit in your design
+</p>
+
+<textarea highlight-js lang="html">
+  <div
+    class="horizontal-progress-bar"
+    *ngxProgress="
+      let percentages of ['reviewed', 'pending'];
+      in: answers;
+      key: 'status'
+    "
+  >
+    <div class="progress-item active" [style.width.%]="percentages[0]"></div>
+    <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
+  </div>
+</textarea>
+
+<div
+  class="horizontal-progress-bar"
+  *ngxProgress="
+    let percentages of ['reviewed', 'pending'];
+    in: answers;
+    key: 'status'
+  "
+>
+  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
+</div>
+<div
+  class="horizontal-progress-bar"
+  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
+>
+  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
+</div>
+
+<div
+  class="horizontal-progress-bar"
+  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
+>
+  <div class="blur-vignette"></div>
+  <img
+    class="progress-item"
+    [style.width.%]="percentages[0]"
+    src="https://picsum.photos/200/50"
+    alt=""
+  />
+  <img
+    class="progress-item"
+    [style.width.%]="percentages[1]"
+    src="https://picsum.photos/100/50"
+    alt=""
+  />
+</div>
+
+<div
+  class="vertical-progress-bar"
+  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
+>
+  <div class="blur-vignette"></div>
+  <img
+    class="progress-item"
+    [style.height.%]="percentages[0]"
+    src="https://picsum.photos/50/200"
+    alt=""
+  />
+  <img
+    class="progress-item"
+    [style.height.%]="percentages[1]"
+    src="https://picsum.photos/50/100"
+    alt=""
+  />
+</div>
+
+<div
+  class="wavy horizontal-progress-bar"
+  *ngxProgress="let percentages of [reviewed]; in: answers"
+>
+  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
+</div>

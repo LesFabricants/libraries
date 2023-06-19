@@ -74,7 +74,7 @@
       },
       "root": "projects/demo",
       "sourceRoot": "projects/demo/src",
-      "prefix": "app",
+      "prefix": "demo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -89,9 +89,7 @@
               "projects/demo/src/favicon.ico",
               "projects/demo/src/assets"
             ],
-            "styles": [
-              "projects/demo/src/styles.scss"
-            ],
+            "styles": ["projects/demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -157,9 +155,7 @@
               "projects/demo/src/favicon.ico",
               "projects/demo/src/assets"
             ],
-            "styles": [
-              "projects/demo/src/styles.scss"
-            ],
+            "styles": ["projects/demo/src/styles.scss"],
             "scripts": []
           }
         }

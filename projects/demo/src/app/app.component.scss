@@ -1,18 +1,15 @@
-.progress-bar {
-  width: 300px;
-  height: 50px;
-  border: 1px solid grey;
+aside {
+  grid-area: sidebar;
+  padding: 1em 3em;
 }
 
-.progress-item {
-  display: inline-block;
-  height: inherit;
+header {
+  grid-area: header;
+  border-bottom: 15px solid #55f0c8;
+}
 
-  &.blue {
-    background-color: #00f;
-  }
-
-  &.green {
-    background-color: #0f0;
-  }
+main {
+  grid-area: main;
+  padding: 2em;
+  background-color: #f5f5f5;
 }

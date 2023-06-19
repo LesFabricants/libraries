@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.min.css");
+
+body {
+  display: grid;
+  /* prettier-ignore */
+  grid-template:
+    'header   header' auto
+    'sidebar  main  ' 1fr
+    /auto     1fr;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
