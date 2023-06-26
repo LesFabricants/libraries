@@ -1,0 +1,16 @@
+p {
+  margin-block-end: 2em;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  & > * {
+    flex: 1 1 0;
+  }
+}

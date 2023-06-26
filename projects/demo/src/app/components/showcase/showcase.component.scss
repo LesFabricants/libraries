@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2em;
+}
+
+aside {
+  align-self: self-start;
+  position: sticky;
+  top: 0;
+  max-width: 275px;
+  max-height: 85vh;
+  overflow: scroll;
+}

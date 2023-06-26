@@ -1,0 +1,13 @@
+<demo-example [showCode]="showCode" [sourceCode]="sourceCode">
+  <div
+    class="horizontal-progress-bar"
+    *ngxProgress="
+      let percentages of ['reviewed', 'pending'];
+      in: answers;
+      key: 'status'
+    "
+  >
+    <div class="progress-item dark-blue" [style.width.%]="percentages[0]"></div>
+    <div class="progress-item cyan" [style.width.%]="percentages[1]"></div>
+  </div>
+</demo-example>

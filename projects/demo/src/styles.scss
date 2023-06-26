@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/primeng.custom.css';
+@import 'primeng/resources/primeng.css';
+@import url('https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.min.css');
+
+:root {
+  --primary: #55f0c8;
+  --secondary: #313c52;
+  --secondary-50: #313c5288;
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+}
+
+body {
+  display: grid;
+  /* prettier-ignore */
+  grid-template:
+    'header   header' auto
+    'sidebar  main  ' 1fr
+    /auto     1fr;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-block-start: 2em;
+  padding-block-start: 1em;
+  border-top: 2px solid var(--secondary);
+}
+
+h3 {
+  margin-block-start: 3em;
+}
+
+a {
+  color: #2228;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #222;
+  }
+
+  &.active {
+    color: #222;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--primary);
+  }
+}

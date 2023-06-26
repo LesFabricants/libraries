@@ -16,10 +16,7 @@
         "dist/ngx-flex-limitter/ngx-flex-limitter",
         "dist/ngx-flex-limitter"
       ],
-      "ngx-progress": [
-        "dist/ngx-progress/ngx-progress",
-        "dist/ngx-progress"
-      ]
+      "ngx-progress": ["dist/ngx-progress/ngx-progress", "dist/ngx-progress"]
     },
     "declaration": false,
     "downlevelIteration": true,
@@ -28,10 +25,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2022", "dom"],
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {

@@ -1,0 +1,62 @@
+<demo-showcase>
+  <h1>ngx-Progress</h1>
+
+  <p>
+    A small utility directive to create progress bars without having to hack
+    your way through css overwrites
+  </p>
+
+  <section class="showcase">
+    <demo-progress-keyed [showCode]="false" />
+    <demo-progress-complex-grouping [showCode]="false" />
+    <demo-progress-images [showCode]="false" />
+    <demo-progress-vertical [showCode]="false" />
+    <demo-progress-wavy [showCode]="false" />
+  </section>
+
+  <h2>Installation</h2>
+
+  <!-- <pre><code [languages]="['bash']" [highlight]="npmInstallCode"></code></pre> -->
+
+  in a module:
+
+  <pre><code [highlight]="angularModuleInstallCode"></code></pre>
+
+  Or in a standalone component:
+
+  <pre><code [highlight]="angularStandaloneInstallCode"></code></pre>
+
+  <h2 id="examples">Examples</h2>
+
+  <h3>Keyed progress bar</h3>
+  <p>
+    If you want to display progress based on the status of all the items in a
+    list, you can tell the directive to calculate based on the value of a
+    property directly
+  </p>
+  <demo-progress-keyed />
+
+  <h3>Complex progress bar</h3>
+  <p>
+    You can also simply filter the items yourself and give the output to the
+    directive if the use case if more complex
+  </p>
+  <demo-progress-complex-grouping />
+
+  <h3>Progress bar with images</h3>
+  <p>
+    Since this is only a directive, no styles or HTML structure is forced upon
+    you, you can add images if you want
+  </p>
+  <demo-progress-images />
+
+  <h3>Vertical progress bar</h3>
+  <p>
+    No restriction on the direction of the progress bar, just change your css !
+  </p>
+  <demo-progress-vertical />
+
+  <h3>Wavy progress bar</h3>
+  <p>Wacky progress bar ? sure !</p>
+  <demo-progress-wavy />
+</demo-showcase>

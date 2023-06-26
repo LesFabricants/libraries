@@ -1,26 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ScrollSpyService } from './services/scroll-spy.service';
 
 @Component({
-  selector: 'app-root',
+  selector: '[demo-root]',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'demo';
-  answers = [
-    {
-      status: 'pending',
-      comment: 'answer 1',
-    },
-    {
-      status: 'pending',
-      comment: 'answer 2',
-    },
-    {
-      status: 'reviewed',
-      comment: 'answer 3',
-    },
-  ];
-  reviewed = this.answers.filter((answer) => answer.status === 'reviewed');
-  pending = this.answers.filter((answer) => answer.status === 'pending');
+  @ViewChild("scroll", { read: ElementRef }) scroll: ElementRef<HTMLElement> | null = null;
+
+  constructor(private scrollSpyService: ScrollSpyService) { }
+
+  ngAfterViewInit() {
+    if (this.scroll) {
+      this.scrollSpyService.defineScrollingContext(this.scroll?.nativeElement);
+    }
+  }
 }
