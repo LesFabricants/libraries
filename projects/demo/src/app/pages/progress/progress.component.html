@@ -1,85 +1,62 @@
-<h1>Progress</h1>
+<demo-showcase>
+  <h1>ngx-Progress</h1>
 
-<p>
-  A small utility directive to create progress bars without having to hack css
-  to make a component fit in your design
-</p>
+  <p>
+    A small utility directive to create progress bars without having to hack
+    your way through css overwrites
+  </p>
 
-<textarea highlight-js lang="html">
-  <div
-    class="horizontal-progress-bar"
-    *ngxProgress="
-      let percentages of ['reviewed', 'pending'];
-      in: answers;
-      key: 'status'
-    "
-  >
-    <div class="progress-item active" [style.width.%]="percentages[0]"></div>
-    <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
-  </div>
-</textarea>
+  <section class="showcase">
+    <demo-progress-keyed [showCode]="false" />
+    <demo-progress-complex-grouping [showCode]="false" />
+    <demo-progress-images [showCode]="false" />
+    <demo-progress-vertical [showCode]="false" />
+    <demo-progress-wavy [showCode]="false" />
+  </section>
 
-<div
-  class="horizontal-progress-bar"
-  *ngxProgress="
-    let percentages of ['reviewed', 'pending'];
-    in: answers;
-    key: 'status'
-  "
->
-  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
-  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
-</div>
-<div
-  class="horizontal-progress-bar"
-  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
->
-  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
-  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
-</div>
+  <h2>Installation</h2>
 
-<div
-  class="horizontal-progress-bar"
-  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
->
-  <div class="blur-vignette"></div>
-  <img
-    class="progress-item"
-    [style.width.%]="percentages[0]"
-    src="https://picsum.photos/200/50"
-    alt=""
-  />
-  <img
-    class="progress-item"
-    [style.width.%]="percentages[1]"
-    src="https://picsum.photos/100/50"
-    alt=""
-  />
-</div>
+  <!-- <pre><code [languages]="['bash']" [highlight]="npmInstallCode"></code></pre> -->
 
-<div
-  class="vertical-progress-bar"
-  *ngxProgress="let percentages of [reviewed, pending]; in: answers"
->
-  <div class="blur-vignette"></div>
-  <img
-    class="progress-item"
-    [style.height.%]="percentages[0]"
-    src="https://picsum.photos/50/200"
-    alt=""
-  />
-  <img
-    class="progress-item"
-    [style.height.%]="percentages[1]"
-    src="https://picsum.photos/50/100"
-    alt=""
-  />
-</div>
+  in a module:
 
-<div
-  class="wavy horizontal-progress-bar"
-  *ngxProgress="let percentages of [reviewed]; in: answers"
->
-  <div class="progress-item active" [style.width.%]="percentages[0]"></div>
-  <div class="progress-item inactive" [style.width.%]="percentages[1]"></div>
-</div>
+  <pre><code [highlight]="angularModuleInstallCode"></code></pre>
+
+  Or in a standalone component:
+
+  <pre><code [highlight]="angularStandaloneInstallCode"></code></pre>
+
+  <h2 id="examples">Examples</h2>
+
+  <h3>Keyed progress bar</h3>
+  <p>
+    If you want to display progress based on the status of all the items in a
+    list, you can tell the directive to calculate based on the value of a
+    property directly
+  </p>
+  <demo-progress-keyed />
+
+  <h3>Complex progress bar</h3>
+  <p>
+    You can also simply filter the items yourself and give the output to the
+    directive if the use case if more complex
+  </p>
+  <demo-progress-complex-grouping />
+
+  <h3>Progress bar with images</h3>
+  <p>
+    Since this is only a directive, no styles or HTML structure is forced upon
+    you, you can add images if you want
+  </p>
+  <demo-progress-images />
+
+  <h3>Vertical progress bar</h3>
+  <p>
+    No restriction on the direction of the progress bar, just change your css !
+  </p>
+  <demo-progress-vertical />
+
+  <h3>Wavy progress bar</h3>
+  <p>Wacky progress bar ? sure !</p>
+  <demo-progress-wavy />
+</demo-showcase>

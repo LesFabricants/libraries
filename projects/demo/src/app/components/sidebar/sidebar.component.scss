@@ -6,24 +6,3 @@ ul {
 li:nth-child(n + 2) {
   margin-block-start: 1em;
 }
-
-a {
-  color: #222;
-  opacity: 0.5;
-  text-decoration: none;
-  font-family: Open Sans, sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &.active {
-    opacity: 1;
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: #55f0c8;
-  }
-}

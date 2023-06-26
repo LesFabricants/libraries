@@ -1,0 +1,8 @@
+<demo-example [showCode]="showCode" [sourceCode]="sourceCode">
+  <div
+    class="wavy horizontal-progress-bar"
+    *ngxProgress="let percentages of ['reviewed']; in: answers; key: 'status'"
+  >
+    <div class="progress-item cyan" [style.width.%]="percentages[0]"></div>
+  </div>
+</demo-example>

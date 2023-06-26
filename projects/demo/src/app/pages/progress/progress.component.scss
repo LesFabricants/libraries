@@ -1,92 +1,16 @@
-.horizontal-progress-bar {
-  position: relative;
-  width: 300px;
-  height: 50px;
+p {
+  margin-block-end: 2em;
+}
 
-  .progress-item {
-    display: inline-block;
-    height: inherit;
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 30px;
 
-    &.active {
-      background-color: #313c52;
-    }
-
-    &.inactive {
-      background-color: #55f0c8;
-    }
+  & > * {
+    flex: 1 1 0;
   }
-}
-
-.vertical-progress-bar {
-  position: relative;
-  height: 300px;
-  width: 50px;
-
-  .progress-item {
-    display: block;
-    width: inherit;
-
-    &.active {
-      background-color: #313c52;
-    }
-
-    &.inactive {
-      background-color: #55f0c8;
-    }
-  }
-}
-
-.blur-vignette {
-  --radius: 0px;
-  --inset: 4px;
-  --transition-length: 0px;
-  --blur: 15px;
-
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius);
-  backdrop-filter: blur(var(--blur));
-  backdrop-filter: blur(var(--blur));
-  --r: max(var(--transition-length), calc(var(--radius) - var(--inset)));
-  --corner-size: calc(var(--r) + var(--inset)) calc(var(--r) + var(--inset));
-  --corner-gradient: transparent 0px,
-    transparent calc(var(--r) - var(--transition-length)), black var(--r);
-  --fill-gradient: black, black var(--inset),
-    transparent calc(var(--inset) + var(--transition-length)),
-    transparent calc(100% - var(--transition-length) - var(--inset)),
-    black calc(100% - var(--inset));
-  --fill-narrow-size: calc(100% - (var(--inset) + var(--r)) * 2);
-  --fill-farther-position: calc(var(--inset) + var(--r));
-  mask-image: linear-gradient(to right, var(--fill-gradient)),
-    linear-gradient(to bottom, var(--fill-gradient)),
-    radial-gradient(at bottom right, var(--corner-gradient)),
-    radial-gradient(at bottom left, var(--corner-gradient)),
-    radial-gradient(at top left, var(--corner-gradient)),
-    radial-gradient(at top right, var(--corner-gradient));
-  mask-size: 100% var(--fill-narrow-size), var(--fill-narrow-size) 100%,
-    var(--corner-size), var(--corner-size), var(--corner-size),
-    var(--corner-size);
-  mask-position: 0 var(--fill-farther-position), var(--fill-farther-position) 0,
-    0 0, 100% 0, 100% 100%, 0 100%;
-  mask-repeat: no-repeat;
-}
-
-.wavy {
-  --size: 40px;
-  --b: 10px;
-  --p: 38.75px;
-  --R: calc(55.9px + var(--b) / 2);
-
-  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
-  mask: radial-gradient(
-        var(--R) at left 50% bottom calc(-1 * var(--p)),
-        var(--_g)
-      )
-      calc(50% - 2 * var(--size)) calc(50% - var(--size) / 2 - var(--b) / 2) /
-      calc(4 * var(--size)) calc(var(--size) + var(--b)),
-    radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), var(--_g)) 50%
-      calc(50% + var(--size) / 2 + var(--b) / 2) / calc(4 * var(--size))
-      calc(var(--size) + var(--b));
-  mask-repeat: repeat-x;
-  background: #ddd;
 }
