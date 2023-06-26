@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "start:demo": "ng serve demo --ssl",
+    "build:all": "npm run build:ngx-progress:prod && npm run build:ngx-flex-limitter:prod && npm run build:demo",
     "build:demo": "ng build demo --configuration production --base-href https://passiverecords.github.io/libraries/",
     "build:ngx-flex-limitter": "ng build ngx-flex-limitter --configuration development",
     "build:ngx-flex-limitter:prod": "ng build ngx-flex-limitter --configuration production",
