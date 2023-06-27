@@ -120,7 +120,11 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "index": {
+                "input": "projects/demo/src/index.staging.html",
+                "output": "index.html"
+              }
             }
           },
           "defaultConfiguration": "production"
