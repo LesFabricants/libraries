@@ -14,9 +14,14 @@
     "paths": {
       "ngx-flex-limitter": [
         "dist/ngx-flex-limitter/ngx-flex-limitter",
-        "dist/ngx-flex-limitter"
+        "dist/ngx-flex-limitter",
+        "projects/ngx-flex-limitter/src/public-api.ts"
       ],
-      "ngx-progress": ["dist/ngx-progress/ngx-progress", "dist/ngx-progress"]
+      "ngx-progress": [
+        "dist/ngx-progress/ngx-progress",
+        "dist/ngx-progress",
+        "projects/ngx-progress/src/public-api.ts"
+      ]
     },
     "declaration": false,
     "downlevelIteration": true,
