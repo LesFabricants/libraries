@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExampleComponent } from 'projects/demo/src/app/base/example.base.component';
+import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
   selector: 'demo-progress-vertical',
   templateUrl: './vertical.component.html',
   styleUrls: ['./vertical.component.scss']
 })
-export class VerticalComponent extends ExampleComponent {
+export class VerticalComponent extends ExampleBaseComponent {
   answers = [
     {
       status: 'pending',

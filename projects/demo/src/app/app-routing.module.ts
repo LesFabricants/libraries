@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/progress/progress.module').then((m) => m.ProgressModule),
   },
+  {
+    path: 'flex-limitter',
+    loadChildren: () =>
+      import('./pages/flex-limitter/flex-limitter.module').then((m) => m.FlexLimitterModule),
+  },
 ];
 
 @NgModule({
