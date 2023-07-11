@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExampleComponent } from 'projects/demo/src/app/base/example.base.component';
+import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
   selector: 'demo-progress-images',
   templateUrl: './images.component.html',
   styleUrls: ['./images.component.scss']
 })
-export class ImagesComponent extends ExampleComponent {
+export class ImagesComponent extends ExampleBaseComponent {
   answers = [
     {
       status: 'pending',

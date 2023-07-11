@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExampleComponent } from 'projects/demo/src/app/base/example.base.component';
+import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
   selector: 'demo-progress-wavy',
   templateUrl: './wavy.component.html',
   styleUrls: ['./wavy.component.scss']
 })
-export class WavyComponent extends ExampleComponent {
+export class WavyComponent extends ExampleBaseComponent {
   answers = [
     {
       status: 'pending',

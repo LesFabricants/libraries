@@ -11,7 +11,7 @@ import { WavyComponent } from './examples/wavy/wavy.component';
 import { ExampleComponent } from '../../components/example/example.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ShowcaseComponent } from '../../components/showcase/showcase.component';
-import { HeadingDirective } from '../../directives/heading.directive';
+import { DirectivesModule } from '../../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import { HeadingDirective } from '../../directives/heading.directive';
     ImagesComponent,
     VerticalComponent,
     WavyComponent,
-    HeadingDirective,
   ],
   imports: [
     CommonModule,
     ProgressRoutingModule,
     NgxProgressDirective,
+    DirectivesModule,
     HighlightModule,
     ExampleComponent,
     ShowcaseComponent,

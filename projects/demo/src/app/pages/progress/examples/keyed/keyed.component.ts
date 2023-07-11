@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExampleComponent } from 'projects/demo/src/app/base/example.base.component';
+import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
   selector: 'demo-progress-keyed',
   templateUrl: './keyed.component.html',
   styleUrls: ['./keyed.component.scss']
 })
-export class KeyedComponent extends ExampleComponent {
+export class KeyedComponent extends ExampleBaseComponent {
   answers = [
     {
       status: 'pending',

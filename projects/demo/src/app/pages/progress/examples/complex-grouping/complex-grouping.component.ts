@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExampleComponent } from 'projects/demo/src/app/base/example.base.component';
+import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
   selector: 'demo-progress-complex-grouping',
   templateUrl: './complex-grouping.component.html',
   styleUrls: ['./complex-grouping.component.scss']
 })
-export class ComplexGroupingComponent extends ExampleComponent {
+export class ComplexGroupingComponent extends ExampleBaseComponent {
   answers = [
     { value: 10 },
     { value: 403 },
