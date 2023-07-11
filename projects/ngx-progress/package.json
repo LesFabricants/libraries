@@ -1,6 +1,20 @@
 {
   "name": "ngx-progress",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A small utility directive to create progress bars without having to hack your way through css overwrites",
+  "keywords": [
+    "progress",
+    "angular",
+    "progress bar",
+    "ngx",
+    "directive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesFabricants/libraries.git",
+    "directory": "projects/ngx-progress"
+  },
+  "homepage": "https://lesfabricants.github.io/libraries/#/progress",
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/core": "^16.1.0"
