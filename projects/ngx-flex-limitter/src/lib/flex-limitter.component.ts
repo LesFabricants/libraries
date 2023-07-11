@@ -3,7 +3,6 @@ import {
   Component,
   ContentChild,
   Input,
-  NgZone,
   OnChanges,
   SimpleChanges,
   TemplateRef,
@@ -40,10 +39,7 @@ export class FlexLimitterComponent implements AfterViewInit, OnChanges {
   private __isOverflowing = false;
   private __isViewInitialized = false;
 
-  constructor(
-    private viewContainer: ViewContainerRef,
-    private ngZone: NgZone
-  ) {}
+  constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (
@@ -55,40 +51,28 @@ export class FlexLimitterComponent implements AfterViewInit, OnChanges {
   }
 
   ngAfterViewInit(): void {
-    // ? this allows us to handle elements currently hidden from view via the details element
-    const resizeObserver = new ResizeObserver(() => {
-      if (this.items.length && !this.linesComputed) {
-        this.buildView();
-        this.linesComputed = true;
-      }
-    });
-    resizeObserver.observe(this.viewContainer.element.nativeElement);
+    if (this.items.length && !this.linesComputed) {
+      this.buildView();
+      this.linesComputed = true;
+    }
     this.__isViewInitialized = true;
   }
 
   buildView() {
     this.innerViewContainer.clear();
-    // ? this is a hack to get around the fact that the viewContainer
-    // ? is not fully cleared before adding items, causing false
-    // ? #getBoundingClientRect().top readings
-    // ! As a downside, this causes blinking when updating the view
-    this.ngZone.runOutsideAngular(() => {
-      setTimeout(() => {
-        if (this.itemTemplate) {
-          this.computeLines();
-        }
-        if (this.expandTemplate && this.skippedItems > 0) {
-          this.insertExpandTemplate();
-        } else if (
-          this.collapseTemplate &&
-          this.__isOverflowing &&
-          this.skippedItems === 0
-        ) {
-          this.insertCollapseTemplate();
-        }
-        this.__initialBuild = false;
-      });
-    });
+    if (this.itemTemplate) {
+      this.computeLines();
+    }
+    if (this.expandTemplate && this.skippedItems > 0) {
+      this.insertExpandTemplate();
+    } else if (
+      this.collapseTemplate &&
+      this.__isOverflowing &&
+      this.skippedItems === 0
+    ) {
+      this.insertCollapseTemplate();
+    }
+    this.__initialBuild = false;
   }
 
   computeLines() {
@@ -105,7 +89,7 @@ export class FlexLimitterComponent implements AfterViewInit, OnChanges {
       );
       itemElement.detectChanges();
       const itemElementNative: HTMLElement = itemElement.rootNodes[0];
-      const itemElementTop = itemElementNative.getBoundingClientRect().top;
+      const itemElementTop = itemElementNative.offsetTop;
       if (itemElementTop !== previousTop) {
         currentLine++;
         previousTop = itemElementTop;
