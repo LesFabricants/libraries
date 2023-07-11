@@ -9,8 +9,8 @@
   },
   "homepage": "https://lesfabricants.github.io/libraries/#/flex-limitter",
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0"
+    "@angular/common": "^16.1.0",
+    "@angular/core": "^16.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
