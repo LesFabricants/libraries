@@ -1,24 +1,56 @@
-# NgxProgress
+# ngx-progress
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+A library for limiting the number of lines in a flex container, complete with customizable expand and collapse.
 
-## Code scaffolding
+![Progress preview](./progress.png)
 
-Run `ng generate component component-name --project ngx-progress` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-progress`.
-> Note: Don't forget to add `--project ngx-progress` or else it will be added to the default project in your `angular.json` file. 
+```html
+<ng-template
+  class="horizontal-progress-bar"
+  *ngxProgress="
+    let percentages of ['reviewed', 'pending'];
+    in: answers;
+    key: 'status'
+  "
+>
+  <div class="progress-item dark-blue" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item cyan" [style.width.%]="percentages[1]"></div>
+</div>
+<div
+  class="horizontal-progress-bar"
+  *ngxProgress="
+    let percentages of ['reviewed', 'pending'];
+    in: answers;
+    key: 'status'
+  "
+>
+  <div class="progress-item dark-blue" [style.width.%]="percentages[0]"></div>
+  <div class="progress-item cyan" [style.width.%]="percentages[1]"></div>
+</div>
+```
 
-## Build
+```ts
+answers = [
+  {
+    status: 'pending',
+    comment: 'answer 1',
+  },
+  {
+    status: 'pending',
+    comment: 'answer 2',
+  },
+  {
+    status: 'reviewed',
+    comment: 'answer 3',
+  },
+];
+```
 
-Run `ng build ngx-progress` to build the project. The build artifacts will be stored in the `dist/` directory.
+## How to use
 
-## Publishing
+The library documentation is available over at
+<https://lesfabricants.github.io/libraries/#/progress>
 
-After building your library with `ng build ngx-progress`, go to the dist folder `cd dist/ngx-progress` and run `npm publish`.
+&nbsp;
 
-## Running unit tests
-
-Run `ng test ngx-progress` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+_This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0._
