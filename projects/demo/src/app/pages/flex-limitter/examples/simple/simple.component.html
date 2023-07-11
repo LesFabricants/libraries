@@ -1,0 +1,21 @@
+<demo-example [showCode]="showCode" [sourceCode]="sourceCode">
+  <ngx-flex-limitter
+    class="item-list"
+    [items]="items"
+    [totalLines]="totalLines"
+  >
+    <ng-template ngxFlexLimitterItem let-item>
+      <div class="item">{{ item.value }}</div>
+    </ng-template>
+    <ng-template ngxFlexLimitterExpand let-amount>
+      <button type="button" class="expand-button" (click)="expand()">
+        +{{ amount }}
+      </button>
+    </ng-template>
+    <ng-template ngxFlexLimitterCollapse>
+      <button type="button" class="collapse-button" (click)="collapse()">
+        -
+      </button>
+    </ng-template>
+  </ngx-flex-limitter>
+</demo-example>

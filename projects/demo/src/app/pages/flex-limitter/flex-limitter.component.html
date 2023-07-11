@@ -1,0 +1,102 @@
+<demo-showcase>
+  <h1>ngx-flex-limitter</h1>
+
+  <p>
+    A library for limiting the number of lines in a flex container, complete
+    with customizable expand and collapse.
+  </p>
+
+  <section class="showcase">
+    <demo-flex-limitter-simple [showCode]="false" />
+  </section>
+
+  <h2>Installation</h2>
+
+  <pre><code [languages]="['bash']" [highlight]="npmInstallCode"></code></pre>
+
+  in a module:
+
+  <pre><code [highlight]="angularModuleInstallCode"></code></pre>
+
+  Or in a standalone component:
+
+  <pre><code [highlight]="angularStandaloneInstallCode"></code></pre>
+
+  <h2 id="overview">Overview</h2>
+
+  <p>The flex container supports the following attributes:</p>
+
+  <ul>
+    <li>
+      <code>class</code>: a string of classes to add to the flex container.
+    </li>
+    <li><code>[items]</code>: the items that will be displayed.</li>
+    <li>
+      <code>[totalLines]</code>: the total number of lines that the flex
+      container will have before collapsing items.
+    </li>
+  </ul>
+
+  <p>The component can contain the following templates:</p>
+
+  <ul>
+    <li>
+      <code>ngxFlexLimitterItem</code>: the template that will be used to
+      display each item.
+
+      <pre><code [highlight]="itemTemplateCode"></code></pre>
+      <p>
+        you can access the items in your item list by using the implicit
+        <a
+          href="https://angular.io/guide/template-reference-variables#template-input-variable"
+          target="_blank"
+          rel="noopener noreferrer"
+          >template variable</a
+        >
+        <code>let-item </code>.
+      </p>
+
+      <p class="italic">
+        Note: since this variable is implicit, this can be called anything, as
+        long as it starts with <code>let</code> eg: <code>let-hello</code>,
+        <code>let-world</code>, etc.
+      </p>
+      <pre><code [highlight]="itemTemplateVariableCode"></code></pre>
+    </li>
+
+    <li>
+      <code>ngxFlexLimitterExpand</code>: the template that will be used to
+      represent the expand element.
+
+      <pre><code [highlight]="expandTemplateCode"></code></pre>
+
+      <p>
+        the expand element will be displayed when the amount of items in your
+        list overflows the total number of lines. furthermore, the amount of
+        items hidden is passed to the template as an implicit template variable
+        just like with `ngxFlexLimitterItem`.
+      </p>
+
+      <p class="italic">
+        Note: this doesn't act as a button by default, clicking on this will not
+        display the hidden items.
+      </p>
+    </li>
+
+    <li>
+      <code>ngxFlexLimitterCollapse</code>: the template that will be used to
+      represent the collapse element.
+
+      <pre><code [highlight]="collapseTemplateCode"></code></pre>
+
+      <p>
+        this element is only displayed when ALL of the items that were
+        originally hidden are displayed.
+      </p>
+    </li>
+  </ul>
+
+  <h2 id="examples">Example</h2>
+
+  <demo-flex-limitter-simple />
+</demo-showcase>
