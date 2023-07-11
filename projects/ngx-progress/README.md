@@ -1,6 +1,6 @@
 # ngx-progress
 
-A library for limiting the number of lines in a flex container, complete with customizable expand and collapse.
+A small utility directive to create progress bars without having to hack your way through css overwrites
 
 ![Progress preview](./progress.png)
 
