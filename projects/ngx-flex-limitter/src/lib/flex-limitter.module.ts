@@ -20,4 +20,4 @@ import { FlexLimitterCollapseDirective } from './flex-limitter-collapse/flex-lim
     FlexLimitterCollapseDirective,
   ],
 })
-export class FlexLimitterModule {}
+export class NgxFlexLimitterModule { }
