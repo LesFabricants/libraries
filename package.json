@@ -27,7 +27,7 @@
     "@types/bidirectional-map": "^1.0.2",
     "bidirectional-map": "^1.1.1",
     "ngx-highlightjs": "^9.0.0",
-    "primeng": "^16.0.1",
+    "primeng": "^17.13.0",
     "rxjs": "^7.8.1",
     "tslib": "^2.3.0",
     "url-slug": "^4.0.1",
