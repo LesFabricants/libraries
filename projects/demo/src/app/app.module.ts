@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,12 +13,7 @@ import { ScrollSpyService } from './services/scroll-spy.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SidebarComponent,
-    HeaderComponent
-  ],
+  imports: [BrowserModule, AppRoutingModule, SidebarComponent, HeaderComponent],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
@@ -24,13 +22,23 @@ import { ScrollSpyService } from './services/scroll-spy.service';
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           css: () => import('highlight.js/lib/languages/css'),
-          xml: () => import('highlight.js/lib/languages/xml')
+          xml: () => import('highlight.js/lib/languages/xml'),
         },
-        themePath: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css'
-      }
+        themePath:
+          'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css',
+      },
     },
     ScrollSpyService,
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: '.dark-mode',
+        },
+      },
+    }),
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
