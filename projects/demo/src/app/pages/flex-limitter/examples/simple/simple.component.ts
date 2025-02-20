@@ -4,11 +4,10 @@ import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.co
 import { ExampleComponent } from 'projects/demo/src/app/components/example/example.component';
 
 @Component({
-  selector: 'demo-flex-limitter-simple',
-  templateUrl: './simple.component.html',
-  styleUrls: ['./simple.component.scss'],
-  standalone: true,
-  imports: [NgxFlexLimitterModule, ExampleComponent],
+    selector: 'demo-flex-limitter-simple',
+    templateUrl: './simple.component.html',
+    styleUrls: ['./simple.component.scss'],
+    imports: [NgxFlexLimitterModule, ExampleComponent]
 })
 export class SimpleComponent extends ExampleBaseComponent {
   items = [

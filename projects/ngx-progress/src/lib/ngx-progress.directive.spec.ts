@@ -4,8 +4,8 @@ import { By } from '@angular/platform-browser';
 import { NgxProgressDirective } from './ngx-progress.directive';
 
 @Component({
-  selector: 'ngx-progress-test',
-  template: `
+    selector: 'ngx-progress-test',
+    template: `
     <div
       class="progress-bar"
       *ngxProgress="let percentages of [reviewed, pending]; in: answers"
@@ -14,8 +14,8 @@ import { NgxProgressDirective } from './ngx-progress.directive';
       <div class="progress-item-2" [style.width.%]="percentages[1]"></div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .progress-bar {
         height: 10px;
         width: 100%;
@@ -28,7 +28,8 @@ import { NgxProgressDirective } from './ngx-progress.directive';
         background-color: #dc3545;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class DummyComponent {
   @Input() answers: any[] = [];

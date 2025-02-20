@@ -5,11 +5,10 @@ import { TocComponent } from '../toc/toc.component';
 import { TOCItem } from '../../classes/tocItem';
 
 @Component({
-  selector: 'demo-showcase',
-  templateUrl: './showcase.component.html',
-  styleUrls: ['./showcase.component.scss'],
-  standalone: true,
-  imports: [CommonModule, TocComponent],
+    selector: 'demo-showcase',
+    templateUrl: './showcase.component.html',
+    styleUrls: ['./showcase.component.scss'],
+    imports: [CommonModule, TocComponent]
 })
 export class ShowcaseComponent {
   @ContentChildren(HeadingDirective, {

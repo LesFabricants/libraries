@@ -1,5 +1,19 @@
-<p-tabView>
-  <p-tabPanel *ngFor="let file of files" [header]="file.name">
-    <pre><code [highlight]="file.code"></code></pre>
-  </p-tabPanel>
-</p-tabView>
+<section>
+  <header>
+    <nav>
+      @for (file of files; track $index) {
+      <button
+        (click)="changeCurrentFile(file)"
+        [class.active]="currentFile?.name === file.name"
+      >
+        {{ file.name }}
+      </button>
+      }
+    </nav>
+  </header>
+  <article>
+    @if (currentFile) {
+    <pre><code [highlight]="currentFile.code"></code></pre>
+    }
+  </article>
+</section>

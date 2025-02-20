@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-  selector: 'demo-progress-wavy',
-  templateUrl: './wavy.component.html',
-  styleUrls: ['./wavy.component.scss']
+    selector: 'demo-progress-wavy',
+    templateUrl: './wavy.component.html',
+    styleUrls: ['./wavy.component.scss'],
+    standalone: false
 })
 export class WavyComponent extends ExampleBaseComponent {
   answers = [

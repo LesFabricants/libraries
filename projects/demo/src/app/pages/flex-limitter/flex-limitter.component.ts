@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-flex-limitter',
-  templateUrl: './flex-limitter.component.html',
-  styleUrls: ['./flex-limitter.component.scss']
+    selector: 'demo-flex-limitter',
+    templateUrl: './flex-limitter.component.html',
+    styleUrls: ['./flex-limitter.component.scss'],
+    standalone: false
 })
 export class FlexLimitterComponent {
   npmInstallCode = "npm i @lesfabricants/ngx-flex-limitter";

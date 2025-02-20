@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-  selector: 'demo-progress-vertical',
-  templateUrl: './vertical.component.html',
-  styleUrls: ['./vertical.component.scss']
+    selector: 'demo-progress-vertical',
+    templateUrl: './vertical.component.html',
+    styleUrls: ['./vertical.component.scss'],
+    standalone: false
 })
 export class VerticalComponent extends ExampleBaseComponent {
   answers = [

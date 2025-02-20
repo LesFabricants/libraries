@@ -14,9 +14,10 @@ import { FlexLimitterExpandDirective } from './flex-limitter-expand/flex-limitte
 import { FlexLimitterItemDirective } from './flex-limitter-item/flex-limitter-item.directive';
 
 @Component({
-  selector: 'ngx-flex-limitter',
-  templateUrl: './flex-limitter.component.html',
-  styleUrls: ['./flex-limitter.component.scss'],
+    selector: 'ngx-flex-limitter',
+    templateUrl: './flex-limitter.component.html',
+    styleUrls: ['./flex-limitter.component.scss'],
+    standalone: false
 })
 export class FlexLimitterComponent implements AfterViewInit, OnChanges {
   @Input() items: any[] = [];

@@ -9,11 +9,10 @@ import { BehaviorSubject, combineLatest } from 'rxjs';
 import { ScrollSpyService } from '../../services/scroll-spy.service';
 
 @Component({
-  selector: 'demo-toc',
-  templateUrl: './toc.component.html',
-  styleUrls: ['./toc.component.scss'],
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+    selector: 'demo-toc',
+    templateUrl: './toc.component.html',
+    styleUrls: ['./toc.component.scss'],
+    imports: [CommonModule, RouterModule]
 })
 export class TocComponent implements OnInit {
   @Input({ required: true })

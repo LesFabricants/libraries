@@ -1,7 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[ngxFlexLimitterItem]',
+    selector: '[ngxFlexLimitterItem]',
+    standalone: false
 })
 export class FlexLimitterItemDirective {
   constructor() {}

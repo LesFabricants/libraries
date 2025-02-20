@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-progress',
-  templateUrl: './progress.component.html',
-  styleUrls: ['./progress.component.scss'],
+    selector: 'demo-progress',
+    templateUrl: './progress.component.html',
+    styleUrls: ['./progress.component.scss'],
+    standalone: false
 })
 export class ProgressComponent {
   answers = [

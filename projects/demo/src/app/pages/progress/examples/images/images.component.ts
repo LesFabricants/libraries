@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-  selector: 'demo-progress-images',
-  templateUrl: './images.component.html',
-  styleUrls: ['./images.component.scss']
+    selector: 'demo-progress-images',
+    templateUrl: './images.component.html',
+    styleUrls: ['./images.component.scss'],
+    standalone: false
 })
 export class ImagesComponent extends ExampleBaseComponent {
   answers = [

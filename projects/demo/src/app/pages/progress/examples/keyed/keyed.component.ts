@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-  selector: 'demo-progress-keyed',
-  templateUrl: './keyed.component.html',
-  styleUrls: ['./keyed.component.scss']
+    selector: 'demo-progress-keyed',
+    templateUrl: './keyed.component.html',
+    styleUrls: ['./keyed.component.scss'],
+    standalone: false
 })
 export class KeyedComponent extends ExampleBaseComponent {
   answers = [
