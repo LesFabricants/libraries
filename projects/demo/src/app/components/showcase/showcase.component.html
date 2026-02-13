@@ -3,5 +3,7 @@
 </div>
 
 <aside>
-  <demo-toc *ngIf="tableOfContent.length" [items]="tableOfContent"></demo-toc>
+  @if (tableOfContent.length) {
+    <demo-toc [items]="tableOfContent"></demo-toc>
+  }
 </aside>

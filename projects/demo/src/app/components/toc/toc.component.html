@@ -1,14 +1,18 @@
 <ol>
-  <li *ngFor="let item of items" [ngClass]="'level' + item.level">
-    <a
-      routerLink="."
-      [fragment]="slugs.getKey(item)"
-      (click)="scrollTo(item)"
+  @for (item of items; track item) {
+    <li [ngClass]="'level' + item.level">
+      <a
+        routerLink="."
+        [fragment]="slugs.getKey(item)"
+        (click)="scrollTo(item)"
       [ngClass]="{
         active: item.el === (scrollSpyService.activeElement$ | async)
       }"
-      >{{ item.name }}</a
-    >
-    <demo-toc *ngIf="item.subitems.length" [items]="item.subitems"></demo-toc>
-  </li>
-</ol>
+        >{{ item.name }}</a
+        >
+        @if (item.subitems.length) {
+          <demo-toc [items]="item.subitems"></demo-toc>
+        }
+      </li>
+    }
+  </ol>
