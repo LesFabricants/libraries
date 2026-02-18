@@ -1,6 +1,6 @@
 {
   "name": "@lesfabricants/ngx-progress",
-  "version": "19.0.0",
+  "version": "20.0.0",
   "description": "A small utility directive to create progress bars without having to hack your way through css overwrites",
   "keywords": [
     "progress",
