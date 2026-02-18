@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.0.0](https://github.com/LesFabricants/libraries/compare/ngx-progress/20.0.0...ngx-progress/21.0.0) (2026-02-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **progress:** `angular@21` support
+
+### build
+
+* **progress:** `angular@21` support ([197df53](https://github.com/LesFabricants/libraries/commit/197df5326d7987a8f6a55040ec1b3d464afa9edf))
+
 ## [20.0.0](https://github.com/LesFabricants/libraries/compare/ngx-progress/19.0.0...ngx-progress/20.0.0) (2026-02-18)
 
 
