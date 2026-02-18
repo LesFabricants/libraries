@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [20.0.0](https://github.com/LesFabricants/libraries/compare/ngx-flex-limitter/19.0.0...ngx-flex-limitter/20.0.0) (2026-02-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **flex-limitter:** `angular@20` support
+
+### build
+
+* **flex-limitter:** `angular@20` support ([4ee3551](https://github.com/LesFabricants/libraries/commit/4ee35511285680a9380cc4820a46fc01687c44d9))
+
 ## [19.0.0](https://github.com/LesFabricants/libraries/compare/ngx-flex-limitter/3.0.0...ngx-flex-limitter/19.0.0) (2025-02-20)
 
 
