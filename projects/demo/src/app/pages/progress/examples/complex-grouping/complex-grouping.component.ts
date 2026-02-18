@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-    selector: 'demo-progress-complex-grouping',
-    templateUrl: './complex-grouping.component.html',
-    styleUrls: ['./complex-grouping.component.scss'],
-    standalone: false
+  selector: 'demo-progress-complex-grouping',
+  templateUrl: './complex-grouping.component.html',
+  styleUrls: ['./complex-grouping.component.scss'],
+  standalone: false,
 })
 export class ComplexGroupingComponent extends ExampleBaseComponent {
   answers = [
@@ -28,6 +28,7 @@ export class ComplexGroupingComponent extends ExampleBaseComponent {
   sourceCode = [
     {
       name: 'html',
+      language: 'html',
       code: `<div
   class="horizontal-progress-bar"
   *ngxProgress="let percentages of [lessThan100, moreThan100]; in: answers"
@@ -38,6 +39,7 @@ export class ComplexGroupingComponent extends ExampleBaseComponent {
     },
     {
       name: 'ts',
+      language: 'ts',
       code: `answers = [
   { value: 10 },
   { value: 403 },
@@ -57,6 +59,7 @@ moreThan100 = this.answers.filter((answer) => answer.value > 100);`,
     },
     {
       name: 'scss',
+      language: 'scss',
       code: `.horizontal-progress-bar {
   position: relative;
   width: 300px;
@@ -75,6 +78,6 @@ moreThan100 = this.answers.filter((answer) => answer.value > 100);`,
     }
   }
 }`,
-    }
+    },
   ];
 }
