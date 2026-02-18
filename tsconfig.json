@@ -40,6 +40,18 @@
     },
     {
       "path": "./projects/demo/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-progress/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-progress/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-flex-limitter/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-flex-limitter/tsconfig.spec.json"
     }
   ]
 }
