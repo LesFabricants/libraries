@@ -8,7 +8,6 @@ import {
 
 @Directive({
   selector: '[ngxProgress]',
-  standalone: true,
 })
 export class NgxProgressDirective {
   @Input() ngxProgressOf: any[] = [];
@@ -19,7 +18,7 @@ export class NgxProgressDirective {
 
   constructor(
     private templateRef: TemplateRef<any>,
-    private viewContainer: ViewContainerRef
+    private viewContainer: ViewContainerRef,
   ) {}
 
   ngOnInit() {
@@ -37,10 +36,10 @@ export class NgxProgressDirective {
   calculatePercentageBasedOnKey() {
     for (const value of this.ngxProgressOf) {
       const matchingItems = this.ngxProgressIn.filter(
-        (item) => item[this.ngxProgressKey] === value
+        (item) => item[this.ngxProgressKey] === value,
       );
       this.percentage.push(
-        (matchingItems.length / this.ngxProgressIn.length) * 100
+        (matchingItems.length / this.ngxProgressIn.length) * 100,
       );
     }
   }

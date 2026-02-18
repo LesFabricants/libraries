@@ -51,12 +51,7 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "main": "projects/ngx-progress/src/test.ts",
-            "tsConfig": "projects/ngx-progress/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-progress/karma.conf.js"
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     },

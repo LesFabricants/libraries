@@ -4,8 +4,8 @@ import { By } from '@angular/platform-browser';
 import { NgxProgressDirective } from './ngx-progress.directive';
 
 @Component({
-    selector: 'ngx-progress-test',
-    template: `
+  selector: 'ngx-progress-test',
+  template: `
     <div
       class="progress-bar"
       *ngxProgress="let percentages of [reviewed, pending]; in: answers"
@@ -14,8 +14,8 @@ import { NgxProgressDirective } from './ngx-progress.directive';
       <div class="progress-item-2" [style.width.%]="percentages[1]"></div>
     </div>
   `,
-    styles: [
-        `
+  styles: [
+    `
       .progress-bar {
         height: 10px;
         width: 100%;
@@ -28,8 +28,8 @@ import { NgxProgressDirective } from './ngx-progress.directive';
         background-color: #dc3545;
       }
     `,
-    ],
-    standalone: false
+  ],
+  imports: [NgxProgressDirective],
 })
 export class DummyComponent {
   @Input() answers: any[] = [];
@@ -43,7 +43,7 @@ describe('NgxProgressDirective', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DummyComponent, NgxProgressDirective],
+      imports: [DummyComponent],
     }).compileComponents();
   });
 
@@ -59,7 +59,6 @@ describe('NgxProgressDirective', () => {
   it('should have parts with the correct size', () => {
     const firstPart = fixture.debugElement.query(By.css('.progress-item-1'));
     const secondPart = fixture.debugElement.query(By.css('.progress-item-2'));
-    console.log(fixture.debugElement.nativeElement);
     expect(firstPart.nativeElement.style.width).toBe('60%');
     expect(secondPart.nativeElement.style.width).toBe('40%');
   });
