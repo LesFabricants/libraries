@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarComponent } from './sidebar.component';
+import { RouterModule } from '@angular/router';
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -8,9 +9,8 @@ describe('SidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ SidebarComponent ]
-    })
-    .compileComponents();
+      imports: [RouterModule.forRoot([]), SidebarComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SidebarComponent);
     component = fixture.componentInstance;

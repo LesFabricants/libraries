@@ -4,39 +4,40 @@ import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.co
 import { ExampleComponent } from 'projects/demo/src/app/components/example/example.component';
 
 @Component({
-    selector: 'demo-flex-limitter-simple',
-    templateUrl: './simple.component.html',
-    styleUrls: ['./simple.component.scss'],
-    imports: [NgxFlexLimitterModule, ExampleComponent]
+  selector: 'demo-flex-limitter-simple',
+  templateUrl: './simple.component.html',
+  styleUrls: ['./simple.component.scss'],
+  imports: [NgxFlexLimitterModule, ExampleComponent],
 })
 export class SimpleComponent extends ExampleBaseComponent {
   items = [
-    { value: "Leo" },
-    { value: "Paul" },
-    { value: "Marie" },
-    { value: "Nathan" },
-    { value: "Camilla" },
-    { value: "Jeanne" },
-    { value: "Raz" },
-    { value: "Matt" },
-    { value: "Laureen" },
-    { value: "Augustin" },
-    { value: "Katie" },
-    { value: "Liam" },
-    { value: "Emma" },
-    { value: "Noah" },
-    { value: "Olivia" },
-    { value: "William" },
-    { value: "Ava" },
-    { value: "James" },
-    { value: "Isabella" },
-    { value: "Logan" },
-    { value: "Sophia" },
+    { value: 'Leo' },
+    { value: 'Paul' },
+    { value: 'Marie' },
+    { value: 'Nathan' },
+    { value: 'Camilla' },
+    { value: 'Jeanne' },
+    { value: 'Raz' },
+    { value: 'Matt' },
+    { value: 'Laureen' },
+    { value: 'Augustin' },
+    { value: 'Katie' },
+    { value: 'Liam' },
+    { value: 'Emma' },
+    { value: 'Noah' },
+    { value: 'Olivia' },
+    { value: 'William' },
+    { value: 'Ava' },
+    { value: 'James' },
+    { value: 'Isabella' },
+    { value: 'Logan' },
+    { value: 'Sophia' },
   ];
 
   sourceCode = [
     {
       name: 'html',
+      language: 'html',
       code: `<ngx-flex-limitter
   class="item-list"
   [items]="items"
@@ -59,6 +60,7 @@ export class SimpleComponent extends ExampleBaseComponent {
     },
     {
       name: 'ts',
+      language: 'ts',
       code: `items = [
   { value: "Leo" },
   { value: "Paul" },
@@ -98,6 +100,7 @@ collapse() {
     },
     {
       name: 'scss',
+      language: 'scss',
       code: `.item-list {
   width: 200px;
   gap: 10px;
@@ -110,7 +113,7 @@ collapse() {
   border-radius: 5px;
   cursor: pointer;
 }`,
-    }
+    },
   ];
 
   baseTotalLines = 3;

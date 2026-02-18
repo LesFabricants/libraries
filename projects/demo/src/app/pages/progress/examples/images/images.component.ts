@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-    selector: 'demo-progress-images',
-    templateUrl: './images.component.html',
-    styleUrls: ['./images.component.scss'],
-    standalone: false
+  selector: 'demo-progress-images',
+  templateUrl: './images.component.html',
+  styleUrls: ['./images.component.scss'],
+  standalone: false,
 })
 export class ImagesComponent extends ExampleBaseComponent {
   answers = [
@@ -26,6 +26,7 @@ export class ImagesComponent extends ExampleBaseComponent {
   sourceCode = [
     {
       name: 'html',
+      language: 'html',
       code: `<div
   class="horizontal-progress-bar"
   *ngxProgress="
@@ -50,6 +51,7 @@ export class ImagesComponent extends ExampleBaseComponent {
     },
     {
       name: 'ts',
+      language: 'ts',
       code: `answers = [
   {
     status: 'pending',
@@ -67,6 +69,7 @@ export class ImagesComponent extends ExampleBaseComponent {
     },
     {
       name: 'scss',
+      language: 'scss',
       code: `.horizontal-progress-bar {
   position: relative;
   width: 300px;
@@ -85,6 +88,6 @@ export class ImagesComponent extends ExampleBaseComponent {
     }
   }
 }`,
-    }
+    },
   ];
 }

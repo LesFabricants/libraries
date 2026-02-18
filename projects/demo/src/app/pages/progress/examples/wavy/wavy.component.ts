@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-    selector: 'demo-progress-wavy',
-    templateUrl: './wavy.component.html',
-    styleUrls: ['./wavy.component.scss'],
-    standalone: false
+  selector: 'demo-progress-wavy',
+  templateUrl: './wavy.component.html',
+  styleUrls: ['./wavy.component.scss'],
+  standalone: false,
 })
 export class WavyComponent extends ExampleBaseComponent {
   answers = [
@@ -26,6 +26,7 @@ export class WavyComponent extends ExampleBaseComponent {
   sourceCode = [
     {
       name: 'html',
+      language: 'html',
       code: `<div
   class="wavy horizontal-progress-bar"
   *ngxProgress="let percentages of ['reviewed']; in: answers; key: 'status'"
@@ -35,6 +36,7 @@ export class WavyComponent extends ExampleBaseComponent {
     },
     {
       name: 'ts',
+      language: 'ts',
       code: `answers = [
   {
     status: 'pending',
@@ -52,6 +54,7 @@ export class WavyComponent extends ExampleBaseComponent {
     },
     {
       name: 'scss',
+      language: 'scss',
       code: `.horizontal-progress-bar {
   position: relative;
   width: 300px;
@@ -85,6 +88,6 @@ export class WavyComponent extends ExampleBaseComponent {
   mask-repeat: repeat-x;
   background: #ddd;
 }`,
-    }
+    },
   ];
 }

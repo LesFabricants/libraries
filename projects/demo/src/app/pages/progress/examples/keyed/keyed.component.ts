@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ExampleBaseComponent } from 'projects/demo/src/app/base/example.base.component';
 
 @Component({
-    selector: 'demo-progress-keyed',
-    templateUrl: './keyed.component.html',
-    styleUrls: ['./keyed.component.scss'],
-    standalone: false
+  selector: 'demo-progress-keyed',
+  templateUrl: './keyed.component.html',
+  styleUrls: ['./keyed.component.scss'],
+  standalone: false,
 })
 export class KeyedComponent extends ExampleBaseComponent {
   answers = [
@@ -26,6 +26,7 @@ export class KeyedComponent extends ExampleBaseComponent {
   sourceCode = [
     {
       name: 'html',
+      language: 'html',
       code: `<div
   class="horizontal-progress-bar"
   *ngxProgress="
@@ -40,6 +41,7 @@ export class KeyedComponent extends ExampleBaseComponent {
     },
     {
       name: 'ts',
+      language: 'ts',
       code: `[
   {
     status: 'pending',
@@ -57,6 +59,7 @@ export class KeyedComponent extends ExampleBaseComponent {
     },
     {
       name: 'scss',
+      language: 'scss',
       code: `.horizontal-progress-bar {
   position: relative;
   width: 300px;
@@ -75,6 +78,6 @@ export class KeyedComponent extends ExampleBaseComponent {
     }
   }
 }`,
-    }
+    },
   ];
 }

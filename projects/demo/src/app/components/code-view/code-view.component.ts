@@ -1,4 +1,3 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { HighlightModule } from 'ngx-highlightjs';
 
@@ -10,15 +9,15 @@ import { HighlightModule } from 'ngx-highlightjs';
 })
 export class CodeViewComponent implements OnInit {
   @Input()
-  files: { name: string; code: string }[] = [];
+  files: { name: string; code: string; language: string }[] = [];
 
-  currentFile?: { name: string; code: string };
+  currentFile?: { name: string; code: string; language: string };
 
   ngOnInit() {
     this.currentFile = this.files[0];
   }
 
-  changeCurrentFile(file: { name: string; code: string }) {
+  changeCurrentFile(file: { name: string; code: string; language: string }) {
     this.currentFile = file;
   }
 }

@@ -2,18 +2,18 @@
   <header>
     <nav>
       @for (file of files; track $index) {
-      <button
-        (click)="changeCurrentFile(file)"
-        [class.active]="currentFile?.name === file.name"
-      >
-        {{ file.name }}
-      </button>
+        <button
+          (click)="changeCurrentFile(file)"
+          [class.active]="currentFile?.name === file.name"
+        >
+          {{ file.name }}
+        </button>
       }
     </nav>
   </header>
   <article>
     @if (currentFile) {
-    <pre><code [highlight]="currentFile.code"></code></pre>
+      <pre><code [highlight]="currentFile.code" [language]="currentFile.language"></code></pre>
     }
   </article>
 </section>

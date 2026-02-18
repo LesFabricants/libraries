@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ComplexGroupingComponent } from './complex-grouping.component';
+import { NgxProgressDirective } from 'ngx-progress';
+import { HighlightModule, provideHighlightOptions } from 'ngx-highlightjs';
+import { ExampleComponent } from 'projects/demo/src/app/components/example/example.component';
+import { HIGHLIGHT_PROVIDER_OPTIONS } from 'projects/demo/src/app/consts/highlight-provider-options';
 
 describe('ComplexGroupingComponent', () => {
   let component: ComplexGroupingComponent;
@@ -8,7 +12,9 @@ describe('ComplexGroupingComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ComplexGroupingComponent]
+      declarations: [ComplexGroupingComponent],
+      imports: [NgxProgressDirective, HighlightModule, ExampleComponent],
+      providers: [provideHighlightOptions(HIGHLIGHT_PROVIDER_OPTIONS)],
     });
     fixture = TestBed.createComponent(ComplexGroupingComponent);
     component = fixture.componentInstance;
