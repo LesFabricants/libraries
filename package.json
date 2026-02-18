@@ -1,6 +1,6 @@
 {
   "name": "libraries",
-  "version": "20.0.0",
+  "version": "21.0.0",
   "scripts": {
     "start:demo": "ng serve demo --ssl",
     "build:all": "npm run build:ngx-progress:prod && npm run build:ngx-flex-limitter:prod && npm run build:demo",
