@@ -1,6 +1,6 @@
 {
   "name": "@lesfabricants/ngx-flex-limitter",
-  "version": "20.0.0",
+  "version": "21.0.0",
   "description": "A library for limiting the number of lines in a flex container, complete with customizable expand and collapse.",
   "repository": {
     "type": "git",
