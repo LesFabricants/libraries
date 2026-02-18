@@ -25,12 +25,7 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "main": "projects/ngx-flex-limitter/src/test.ts",
-            "tsConfig": "projects/ngx-flex-limitter/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-flex-limitter/karma.conf.js"
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     },
