@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { HighlightModule } from 'ngx-highlightjs';
 
@@ -6,7 +6,7 @@ import { HighlightModule } from 'ngx-highlightjs';
   selector: 'demo-code-view',
   templateUrl: './code-view.component.html',
   styleUrls: ['./code-view.component.scss'],
-  imports: [CommonModule, HighlightModule],
+  imports: [HighlightModule],
 })
 export class CodeViewComponent implements OnInit {
   @Input()

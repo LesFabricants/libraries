@@ -1,5 +1,5 @@
 import { Component, ContentChildren, ElementRef, QueryList } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { HeadingDirective } from '../../directives/heading.directive';
 import { TocComponent } from '../toc/toc.component';
 import { TOCItem } from '../../classes/tocItem';
@@ -8,7 +8,7 @@ import { TOCItem } from '../../classes/tocItem';
     selector: 'demo-showcase',
     templateUrl: './showcase.component.html',
     styleUrls: ['./showcase.component.scss'],
-    imports: [CommonModule, TocComponent]
+    imports: [TocComponent]
 })
 export class ShowcaseComponent {
   @ContentChildren(HeadingDirective, {
